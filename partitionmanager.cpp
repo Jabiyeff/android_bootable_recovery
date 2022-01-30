@@ -2882,6 +2882,7 @@ void TWPartitionManager::Translate_Partition_Display_Names() {
 }
 
 bool TWPartitionManager::Decrypt_Adopted() {
+/*
 #ifdef TW_INCLUDE_CRYPTO
 	bool ret = false;
 	if (!Mount_By_Path("/data", false)) {
@@ -2985,9 +2986,10 @@ bool TWPartitionManager::Decrypt_Adopted() {
 	}
 	return ret;
 #else
-	LOGINFO("Decrypt_Adopted: no crypto support\n");
+*/
+	LOGINFO("Decrypt_Adopted: not supported on Android 12\n");
 	return false;
-#endif
+//#endif
 }
 
 void TWPartitionManager::Remove_Partition_By_Path(string Path) {
